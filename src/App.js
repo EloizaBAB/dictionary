@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "./logo.png";
+import SearchEngine from "./SearchEngine";
 
 function App() {
   return (
@@ -12,6 +13,13 @@ function App() {
           <h1>Dictionary</h1>
         </span>
       </header>
+      <main>
+        <SearchEngine />
+      </main>
+      <footer className="text-center">
+        {" "}
+        Coded and designed by Eloiza Barbosa
+      </footer>
     </div>
   );
 }

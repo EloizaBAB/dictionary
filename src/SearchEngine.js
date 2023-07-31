@@ -9,7 +9,7 @@ export default function SearchEngine() {
   function handlechange(event) {
     setuserinput(event.target.value);
   }
-
+  /** api documentation : https://dictionaryapi.dev/ */
   function search(event) {
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${userinput}`;

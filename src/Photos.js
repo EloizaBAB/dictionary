@@ -9,11 +9,13 @@ export default function Photos(properties) {
           return (
             <div key={index} className="col-3">
               {" "}
-              <img
-                src={photo.src.landscape}
-                className="photos img-fluid"
-                alt="word"
-              />
+              <a href={photo.src.original} target="_blank" rel="noreferrer">
+                <img
+                  src={photo.src.landscape}
+                  className="photos img-fluid"
+                  alt="word"
+                />
+              </a>{" "}
             </div>
           );
         })}

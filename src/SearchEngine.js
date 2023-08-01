@@ -19,6 +19,7 @@ export default function SearchEngine() {
     setuserinput(event.target.value);
   }
   /** api documentation : https://dictionaryapi.dev/ */
+  /** Used the shecodes image api to get the photos,stored the photos in a state and displayed them inside a Photos component, we sent the images through properties */
   function search(event) {
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${userinput}`;

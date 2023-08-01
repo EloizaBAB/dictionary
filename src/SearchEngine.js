@@ -2,12 +2,16 @@ import { useState } from "react";
 import "./searchstyle.css";
 import axios from "axios";
 import Results from "./Results";
+import Photos from "./Photos";
 export default function SearchEngine() {
   let [userinput, setuserinput] = useState("");
   let [results, setresults] = useState(null);
   let [wordexists, setwordexists] = useState(true);
+  let [photos, setphotos] = useState(null);
+  function handleshecodesResponse(response) {
+    setphotos(response.data.photos);
+  }
   function handleResponse(response) {
-    console.log(response.data[0]);
     setresults(response.data[0]);
     setwordexists(true);
   }
@@ -25,6 +29,10 @@ export default function SearchEngine() {
         setresults(null);
         setwordexists(false);
       });
+    const shecodesapiKey = "a1c796b14cf2te15c7f3o0401b05114d";
+    let shecodesApiUrl = `https://api.shecodes.io/images/v1/search?query=${userinput}&key=${shecodesapiKey}`;
+
+    axios.get(shecodesApiUrl).then(handleshecodesResponse);
   }
   /* add an eventlistenner Onsubmit to form to trigger the function search
       when the user submits a word*/
@@ -56,6 +64,7 @@ Updated the handleSearch function to handle errors in the API call using the .ca
       ) : (
         <p>Invalid word. Please try again.</p>
       )}
+      <Photos photos={photos} />
     </div>
   );
 }

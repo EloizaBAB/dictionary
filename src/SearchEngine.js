@@ -38,6 +38,7 @@ export default function SearchEngine() {
         ></input>
         <input type="submit"></input>
       </form>
+
       <Results result={results} />
     </div>
   );

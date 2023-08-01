@@ -4,15 +4,17 @@ export default function Photos(properties) {
   console.log(properties.photos);
   if (properties.photos) {
     return (
-      <div>
+      <div className="row">
         {properties.photos.map(function (photo, index) {
           return (
-            <img
-              src={photo.src.landscape}
-              key={index}
-              className="photos"
-              alt="word"
-            />
+            <div key={index} className="col-3">
+              {" "}
+              <img
+                src={photo.src.landscape}
+                className="photos img-fluid"
+                alt="word"
+              />
+            </div>
           );
         })}
       </div>

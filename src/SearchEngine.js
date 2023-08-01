@@ -5,9 +5,11 @@ import Results from "./Results";
 export default function SearchEngine() {
   let [userinput, setuserinput] = useState("");
   let [results, setresults] = useState(null);
+  let [wordexists, setwordexists] = useState(true);
   function handleResponse(response) {
     console.log(response.data[0]);
     setresults(response.data[0]);
+    setwordexists(true);
   }
   function handlechange(event) {
     setuserinput(event.target.value);
@@ -16,7 +18,13 @@ export default function SearchEngine() {
   function search(event) {
     event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${userinput}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios
+      .get(apiUrl)
+      .then(handleResponse)
+      .catch(() => {
+        setresults(null);
+        setwordexists(false);
+      });
   }
   /* add an eventlistenner Onsubmit to form to trigger the function search
       when the user submits a word*/
@@ -27,6 +35,11 @@ export default function SearchEngine() {
   /**add and import axios and get the api url inside the function that searches to make the http request using axios */
   /** Build a new component do show the results we got from the api call */
   /**to send the info/results from the api to the component Results we need to use a state,and the state is going to track and store the content of the current word and send it as a propertie to the new component Results */
+  /**Created the wordExists state to track whether the word exists in the API or not.
+Modified the handleResponse function to set wordExists to true after successfully fetching data from the API.
+Updated the handleSearch function to handle errors in the API call using the .catch() method of the Axios promise. If an error occurs, we set wordExists to false and results to null.
+// <Results result={results} />: This is the expression that will be evaluated if wordExists is true. It renders the Results component and passes the results state as a prop called result.
+// <p>Invalid word. Please try again.</p>: This is the expression that will be evaluated if wordExists is false. It renders a paragraph (<p>) */
   return (
     <div className="search-engine">
       <form onSubmit={search}>
@@ -38,8 +51,11 @@ export default function SearchEngine() {
         ></input>
         <input type="submit"></input>
       </form>
-
-      <Results result={results} />
+      {wordexists ? (
+        <Results result={results} />
+      ) : (
+        <p>Invalid word. Please try again.</p>
+      )}
     </div>
   );
 }

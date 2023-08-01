@@ -4,7 +4,7 @@ export default function Phonetics(properties) {
   if (properties.phonetic.audio) {
     return (
       <div>
-        <ReactAudioPlayer src={properties.phonetic.audio} autoPlay controls />
+        <ReactAudioPlayer src={properties.phonetic.audio} controls />
 
         {properties.phonetic.text}
       </div>

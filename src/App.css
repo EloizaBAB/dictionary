@@ -1,9 +1,27 @@
-.App header img {
-  max-width: 100px;
+:root {
+  --beje: #e7e1d3;
+  --light-rose: #e9b094;
+  --black: #32312e;
 }
-.App header span {
-  display: inline-block;
+.App {
+  background-color: var(--beje);
+  width: 80%;
+  height: fit-content;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 9px 2px 1px var(--black);
+  -moz-box-shadow: 10px 9px 2px 1px var(--black);
+  box-shadow: 10px 9px 2px 1px var(--black);
+  border: 3px solid var(--black);
+  margin-top: 100px;
 }
-header {
-  text-align: center;
+.title {
+  color: var(--black);
+  border-bottom: 3px solid var(--black);
+  padding: 10px;
+  padding-left: 40px;
+}
+body {
+  background-color: var(--light-rose);
 }

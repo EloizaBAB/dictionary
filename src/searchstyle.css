@@ -1,3 +1,22 @@
+:root {
+  --beje: #e7e1d3;
+  --light-rose: #e9b094;
+  --black: #32312e;
+}
 .search-engine {
   text-align: center;
+  padding: 80px;
+}
+
+div footer {
+  padding-top: 200px;
+}
+.search-engine input {
+  border: 3px solid var(--black);
+  border-radius: 13px;
+  height: 40px;
+  width: 400px;
+  background-color: var(--light-rose);
+  color: var(--black);
+  font-size: 25px;
 }

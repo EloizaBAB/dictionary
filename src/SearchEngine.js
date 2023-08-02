@@ -49,16 +49,40 @@ Modified the handleResponse function to set wordExists to true after successfull
 Updated the handleSearch function to handle errors in the API call using the .catch() method of the Axios promise. If an error occurs, we set wordExists to false and results to null.
 // <Results result={results} />: This is the expression that will be evaluated if wordExists is true. It renders the Results component and passes the results state as a prop called result.
 // <p>Invalid word. Please try again.</p>: This is the expression that will be evaluated if wordExists is false. It renders a paragraph (<p>) */
+  if (results) {
+    return (
+      <div className="search-engine">
+        <form onSubmit={search}>
+          <input
+            type="search"
+            placeholder="Write here"
+            autoFocus={true}
+            onChange={handlechange}
+          ></input>
+          <input type="submit"></input>
+        </form>
+        {wordexists ? (
+          <Results result={results} />
+        ) : (
+          <p>Invalid word. Please try again.</p>
+        )}
+        <Photos photos={photos} />
+        <footer className="text-center">
+          {" "}
+          Coded and designed by Eloiza Barbosa
+        </footer>
+      </div>
+    );
+  }
   return (
     <div className="search-engine">
       <form onSubmit={search}>
         <input
+          className="type"
           type="search"
-          placeholder="Write here"
-          autoFocus={true}
+          placeholder="Enter Word"
           onChange={handlechange}
         ></input>
-        <input type="submit"></input>
       </form>
       {wordexists ? (
         <Results result={results} />
@@ -66,6 +90,10 @@ Updated the handleSearch function to handle errors in the API call using the .ca
         <p>Invalid word. Please try again.</p>
       )}
       <Photos photos={photos} />
+      <footer className="text-center">
+        {" "}
+        Coded and designed by Eloiza Barbosa
+      </footer>
     </div>
   );
 }

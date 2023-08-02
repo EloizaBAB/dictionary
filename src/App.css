@@ -27,3 +27,30 @@ body {
   background-color: var(--light-rose);
   color: var(--black);
 }
+.fa-circle {
+  font-size: 25px;
+  margin-left: 20px;
+}
+.icon {
+  margin-left: 630px;
+}
+@media (max-width: 800px) {
+  .icon {
+    margin-left: 200px;
+  }
+
+  .fa-circle {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .App {
+    width: 90%;
+    height: fit-content;
+    display: block;
+    margin: 0 auto;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

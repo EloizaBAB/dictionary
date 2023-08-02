@@ -62,7 +62,7 @@ Updated the handleSearch function to handle errors in the API call using the .ca
         {wordexists ? (
           <Results result={results} />
         ) : (
-          <p>Invalid word. Please try again.</p>
+          <p className="invalid">Invalid word. Please try again.</p>
         )}
         <Photos photos={photos} />
       </div>

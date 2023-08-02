@@ -84,10 +84,6 @@ Updated the handleSearch function to handle errors in the API call using the .ca
         <p>Invalid word. Please try again.</p>
       )}
       <Photos photos={photos} />
-      <footer className="text-center">
-        {" "}
-        Coded and designed by Eloiza Barbosa
-      </footer>
     </div>
   );
 }

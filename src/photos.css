@@ -2,3 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+.photos {
+  border-radius: 13px;
+  margin: 10px;
+  border: 3px solid var(--black);
+}

@@ -19,4 +19,71 @@ div footer {
   background-color: var(--light-rose);
   color: var(--black);
   font-size: 25px;
+  margin-bottom: 50px;
+}
+.user-input {
+  text-align: left;
+  padding: 5px;
+  text-transform: capitalize;
+  font-size: 30px;
+  -webkit-box-shadow: 10px 9px 2px 1px var(--black);
+  -moz-box-shadow: 10px 9px 2px 1px var(--black);
+  box-shadow: 10px 9px 2px 1px var(--black);
+  border: 3px solid var(--black);
+  width: 180px;
+  border-radius: 13px;
+}
+.audio {
+  text-align: left;
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+h3 {
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid var(--black);
+  width: 150px;
+  border-radius: 13px;
+  display: block;
+  margin: 0 auto;
+  padding: 7px;
+  background-color: var(--light-rose);
+  margin-bottom: 20px;
+}
+.meaning {
+  text-align: left;
+
+  margin-bottom: 20px;
+}
+.definitions,
+.example {
+  text-align: left;
+  padding-left: 20px;
+  font-size: 18px;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+.synonym-list {
+  border: 3px solid var(--black);
+  padding: 10px;
+  margin-left: 30px;
+  background-color: var(--light-rose);
+  border-radius: 13px;
+}
+
+.synonyms span {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.synonym-title {
+  border: 3px solid var(--black);
+  padding: 10px;
+  border-radius: 13px;
+  background-color: var(--light-rose);
+  padding-right: 13px;
+}
+.example {
+  font-weight: 700;
 }

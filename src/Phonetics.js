@@ -1,9 +1,10 @@
 import React from "react";
+import "./searchstyle.css";
 import ReactAudioPlayer from "react-audio-player";
 export default function Phonetics(properties) {
   if (properties.phonetic.audio) {
     return (
-      <div>
+      <div className="audio">
         <ReactAudioPlayer src={properties.phonetic.audio} controls />
 
         {properties.phonetic.text}

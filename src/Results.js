@@ -1,18 +1,19 @@
 import React from "react";
+import "./searchstyle.css";
 import Meaning from "./Meaning";
 import Phonetics from "./Phonetics";
 export default function Results(properties) {
   if (properties.result) {
     return (
       <div>
-        <h1>{properties.result.word}</h1>
         {properties.result.phonetics.map(function (phonetic, index) {
           return (
             <div key={index}>
               <Phonetics phonetic={phonetic} />
             </div>
           );
-        })}
+        })}{" "}
+        <h1 className="user-input">{properties.result.word}</h1>
         {properties.result.meanings.map(function (meaning, index) {
           return (
             <div key={index}>

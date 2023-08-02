@@ -15,6 +15,7 @@
   box-shadow: 10px 9px 2px 1px var(--black);
   border: 3px solid var(--black);
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 .title {
   color: var(--black);
@@ -24,4 +25,5 @@
 }
 body {
   background-color: var(--light-rose);
+  color: var(--black);
 }

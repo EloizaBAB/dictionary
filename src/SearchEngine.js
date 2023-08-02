@@ -55,11 +55,9 @@ Updated the handleSearch function to handle errors in the API call using the .ca
         <form onSubmit={search}>
           <input
             type="search"
-            placeholder="Write here"
-            autoFocus={true}
+            placeholder="Enter a word"
             onChange={handlechange}
           ></input>
-          <input type="submit"></input>
         </form>
         {wordexists ? (
           <Results result={results} />
@@ -67,10 +65,6 @@ Updated the handleSearch function to handle errors in the API call using the .ca
           <p>Invalid word. Please try again.</p>
         )}
         <Photos photos={photos} />
-        <footer className="text-center">
-          {" "}
-          Coded and designed by Eloiza Barbosa
-        </footer>
       </div>
     );
   }

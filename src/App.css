@@ -49,8 +49,8 @@ body {
     height: fit-content;
     display: block;
     margin: 0 auto;
-
     margin-top: 20px;
     margin-bottom: 20px;
+    box-shadow: 4px 2px 1px 1px var(--black);
   }
 }

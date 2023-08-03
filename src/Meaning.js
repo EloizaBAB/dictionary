@@ -15,7 +15,6 @@ export default function Meaning(properties) {
                 <em className="example">{definition.example}</em>
               </p>
             </div>
-
             <Synonyms synonyms={definition.synonyms} />
           </div>
         );

@@ -119,4 +119,29 @@ p.invalid {
     margin: 0 auto;
     padding: 10px;
   }
+  .meaning {
+    border: 3px solid var(--black);
+    border-radius: 13px;
+    background-color: var(--black);
+    color: #e7e1d3;
+  }
+  .definitions {
+    text-align: center;
+    font-size: 16px;
+  }
+  .example {
+    text-align: left;
+  }
+  h3 {
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid var(--black);
+    width: max-content;
+    display: block;
+    margin: 0 auto;
+    padding: 7px;
+    background-color: var(--beje);
+    margin-bottom: 20px;
+    color: var(--black);
+  }
 }

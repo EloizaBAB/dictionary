@@ -15,5 +15,6 @@
 @media (max-width: 800px) {
   .img-fluid {
     margin-left: 0;
+    box-shadow: 3px 2px 1px 1px var(--black);
   }
 }

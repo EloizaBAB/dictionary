@@ -59,7 +59,7 @@ h3 {
 .example {
   text-align: left;
   padding-left: 20px;
-  font-size: 18px;
+  font-size: 22px;
   padding: 0;
 }
 ul {
@@ -86,6 +86,7 @@ ul {
 }
 .example {
   font-weight: 700;
+  font-size: 17px;
 }
 p.invalid {
   font-size: 50px;
@@ -127,10 +128,11 @@ p.invalid {
   }
   .definitions {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
   }
   .example {
     text-align: left;
+    font-size: 15px;
   }
   h3 {
     font-size: 20px;
